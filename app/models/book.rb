@@ -3,4 +3,4 @@ class Book < ApplicationRecord
     validates :body, presence: true
 end
 
-validates :title, presence: { message: "名前を入力してください" }
+

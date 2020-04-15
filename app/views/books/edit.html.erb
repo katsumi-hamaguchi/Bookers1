@@ -8,8 +8,12 @@
       Body<br>
       <%= f.text_area :body %>
       <br><%= f.submit 'Update Book' %>
-      <br>SHOW |<%= link_to "Back", "/books/new" %>
+      <br>
+       
+      
 　　<% end %>
+    <%= link_to "Show",book_path(@book.id) %>
+    <%= link_to "Back", "/books/new" %>
     </h3>
 　　
   </body>
