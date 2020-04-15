@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <h1>Books</h1>
+       <table>
+       	  <thead>
+       	  <tr>
+       	    <th>Title</th>
+            <th>Body</th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <% @books.each do |book| %>
+              <td class="a"><%= book.title %></td>
+              <td class="b"><%= book.body %></td>
+              <td><%= link_to "Show","/books" %></td> 
+              <td><%= link_to "Edit","/books/new" %></td>
+              <td><%= link_to "Destroy", "/books/new" %></td>
+
+
+              <% end %>
+            </tr>
+          </tbody>
+       </table>
+  
+
+
+
+    <h2>New book</h2>
+    <%= form_for(@book) do |f| %>
+    <h4>Title<br>
+      <%= f.text_field :title %><br>
+      Body<br>
+      <%= f.text_area :body %>
+      <br><%= f.submit 'Create Book' %>
+    </h4>
+<% end %>
+  </body>
+</html>
